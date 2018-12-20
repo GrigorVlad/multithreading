@@ -6,7 +6,7 @@ public class TaskImpl<T> implements Task<T> {
 
     private final Callable<T> callable;
     private volatile T result; //volatile necessary
-    private boolean calculated = false;
+    private volatile boolean calculated = false;
     private volatile Exception exception;
 
     public TaskImpl(Callable<T> callable) {
